@@ -61,6 +61,7 @@ class Nuclear extends StatefulWidget {
 class NuclearState extends State<Nuclear> {
   final TextEditingController commandController = TextEditingController();
   final TextEditingController targetController = TextEditingController();
+  final TextEditingController serverController = TextEditingController();
   String? selectedTarget;
   String? selectedTargetFormat;
   String? selectedTemplates;
@@ -556,9 +557,18 @@ class NuclearState extends State<Nuclear> {
                 context: context,
                 builder: (context) => AlertDialog(
                   title: const Text('Server Address'),
-                  content: const TextField(
-                    decoration:
-                        InputDecoration(hintText: "Enter server address"),
+                  content: TextField(
+                    controller: serverController,
+                    decoration: InputDecoration(
+                        hintText: "Enter server address",
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black, width: 1),
+                          borderRadius: BorderRadius.circular(11),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black, width: 1),
+                          borderRadius: BorderRadius.circular(11),
+                        )),
                   ),
                   actions: [
                     TextButton(
@@ -566,9 +576,13 @@ class NuclearState extends State<Nuclear> {
                       onPressed: () => Navigator.pop(context),
                     ),
                     TextButton(
-                      child: const Text('Save'),
-                      onPressed: () => Navigator.pop(context, serverAddress),
-                    ),
+                        child: const Text('Save'),
+                        onPressed: () {
+                          setState(() {
+                            serverAddress = serverController.text;
+                          });
+                          Navigator.pop(context);
+                        }),
                   ],
                 ),
               );
