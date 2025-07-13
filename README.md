@@ -186,7 +186,7 @@ Visit the following url to download the app.
 - 4). You have various drop down menu which comprises of nuclei flags that helps in forming nuclei command.
 - 5). Click on Scan button to start the nuclei scan.
 - 6). To view the scan see the scan result page.
-    - Scan result separate the scan result in three category **XML** **TXT** **JS** based on output format you select
+    - Scan result separate the scan result in three category **XML** **TXT** **HTML** **JSON** **SQL** **CSV** **NBE** **SARIF** based on output format you select
       here you can see your scan result.
 # You can start multiple scan at once.
 # If you like my project support me by buying me a coffee
