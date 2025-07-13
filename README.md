@@ -36,10 +36,7 @@
     - d). The final /etc/sudoers file should look like this.
       #
       # This file MUST be edited with the 'visudo' command as root.
-      #
-      # Please consider adding local content in /etc/sudoers.d/ instead of
-      # directly modifying this file.
-      #
+      # Please consider adding local content in /etc/sudoers.d/ instead of directly modifying this file.
       # See the man page for details on how to write a sudoers file.
       #
       Defaults	env_reset
