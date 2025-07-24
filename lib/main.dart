@@ -573,11 +573,17 @@ class NuclearState extends State<Nuclear> {
                   ),
                   actions: [
                     TextButton(
-                      child: const Text('Cancel'),
+                      child: const Text(
+                        'Cancel',
+                        style: TextStyle(color: Colors.black),
+                      ),
                       onPressed: () => Navigator.pop(context),
                     ),
                     TextButton(
-                        child: const Text('Save'),
+                        child: const Text(
+                          'Save',
+                          style: TextStyle(color: Colors.black),
+                        ),
                         onPressed: () {
                           setState(() {
                             serverAddress = serverController.text;
@@ -774,6 +780,8 @@ class NuclearState extends State<Nuclear> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Colors.black,
         items: const [
           BottomNavigationBarItem(
             icon: FaIcon(
@@ -899,6 +907,7 @@ class ScanResultState extends State<ScanResult> {
         appBar: AppBar(
           title: const Text("Nuclear"),
           bottom: const TabBar(
+            tabAlignment: TabAlignment.start,
             isScrollable: true,
             tabs: [
               Tab(
@@ -949,6 +958,8 @@ class ScanResultState extends State<ScanResult> {
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
+          selectedItemColor: Colors.black,
+          unselectedItemColor: Colors.grey,
           items: const [
             BottomNavigationBarItem(
               icon: FaIcon(FontAwesomeIcons.atom, color: Colors.grey),
@@ -1033,7 +1044,6 @@ class _ScanFileListState extends State<ScanFileList> {
 
   @override
   Widget build(BuildContext context) {
-    
     return Column(
       children: [
         Padding(
