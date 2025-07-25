@@ -908,6 +908,8 @@ class ScanResultState extends State<ScanResult> {
           title: const Text("Nuclear"),
           bottom: const TabBar(
             tabAlignment: TabAlignment.start,
+            labelColor: Colors.black,
+            indicatorColor: Colors.black,
             isScrollable: true,
             tabs: [
               Tab(
